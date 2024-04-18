@@ -24,6 +24,9 @@
 </p>
 
 <form onsubmit={onPrompt}>
+	<label for="model">Model</label>
+	<input style="width: 90vw;" name="model" type="text" />
+	<label for="prompt">Prompt</label>
 	<input style="width: 90vw;" name="prompt" type="text" />
 	<button type="submit">send</button>
 </form>
