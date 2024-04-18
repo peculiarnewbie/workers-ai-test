@@ -14,5 +14,5 @@ export async function POST({ request, platform }) {
 	);
 
 	// return new Response(JSON.stringify(response));
-	return json({ answer: response });
+	return json(response);
 }

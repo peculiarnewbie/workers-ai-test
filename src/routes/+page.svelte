@@ -14,7 +14,7 @@
 
 		const res = await response.json();
 		console.log(res);
-		promptResponse = res.answer;
+		promptResponse = res.response;
 	};
 </script>
 
@@ -24,7 +24,7 @@
 </p>
 
 <form onsubmit={onPrompt}>
-	<input name="prompt" type="text" />
+	<input style="width: 90vw;" name="prompt" type="text" />
 	<button type="submit">send</button>
 </form>
 
