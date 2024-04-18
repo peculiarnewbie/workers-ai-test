@@ -9,7 +9,8 @@ export async function POST({ request, platform }) {
 	const prompt: string = requestData.prompt;
 	const model: string = requestData.model;
 
-	const response = await aiFunction.run("@hf/thebloke/llama-2-13b-chat-awq", {
+	//@ts-expect-error
+	const response = await aiFunction.run(model, {
 		prompt: prompt,
 	});
 
