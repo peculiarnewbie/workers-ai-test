@@ -2,13 +2,16 @@
 	let promptResponse = $state("");
 
 	const onPrompt = async (e: Event) => {
-		const prompt = (e.target as HTMLFormElement).prompt.value;
+		const formData = new FormData(e.target as HTMLFormElement);
+		const prompt = formData.get("prompt");
+		const model = formData.get("model");
 		console.log(prompt);
 
 		const response = await fetch("/api/prompt", {
 			method: "POST",
 			body: JSON.stringify({
 				prompt: prompt,
+				model: model,
 			}),
 		});
 
